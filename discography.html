@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discography</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Discography</title>
+<style>
     /* index.html と同じ背景設定 */
     html, body { height: 100%; margin: 0; }
     body {
@@ -92,79 +93,134 @@
     }
     .nav a { text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.4); }
     .nav a:hover { border-bottom-color: #fff; }
-  </style>
+  
+/* --- SoundCloud embed section --- */
+.sc-embed {
+  margin-top: 32px;
+  padding: 18px 16px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+}
+
+.sc-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: .03em;
+  text-align: left;
+  opacity: .95;
+}
+
+.sc-player-wrap {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+
+/* Make the player responsive: override the fixed height */
+.sc-player-wrap iframe {
+  width: 100%;
+  height: clamp(260px, 40vw, 420px) !important;
+  border: 0;
+}
+
+/* Small credit line styling */
+.sc-credit {
+  margin: 8px 2px 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sc-credit a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+.sc-credit a:hover {
+  border-bottom-color: #fff;
+}
+</style>
 </head>
 <body>
-  <main class="page">
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <span>／</span>
-      <strong>Discography</strong>
-    </nav>
+<main class="page">
+<nav class="nav">
+<a href="index.html">Home</a>
+<span>／</span>
+<strong>Discography</strong>
+</nav>
+<h1>Discography</h1>
+<section class="grid">
+<article class="card">
+<img alt="right ジャケット画像" class="thumb" src="images/logoutright.jpg"/>
+<div class="meta">
+<h2 class="title">log out/right</h2>
+<div class="row"><span class="label">Release Date:</span>2025-04-26</div>
+<div class="row"><span class="label">Label:</span>Self-released</div>
+<div class="row"><span class="label">Link:</span>
+<a href="https://packageemoji.bandcamp.com/album/log-out-right" rel="noopener" target="_blank">Bandcamp</a>
+</div>
+</div>
+</article>
+<article class="card">
+<img alt="Lichen ジャケット画像" class="thumb" src="images/lichen.jpg"/>
+<div class="meta">
+<h2 class="title">Lichen</h2>
+<div class="row"><span class="label">Release Date:</span>2025-03-01</div>
+<div class="row"><span class="label">Label:</span>Emoticons.</div>
+<div class="row"><span class="label">Link:</span>
+<a href="https://emoticons0w0.bandcamp.com/album/l-i-c-h-e-n" rel="noopener" target="_blank">Bandcamp</a>
+</div>
+</div>
+</article>
+<article class="card">
+<img alt="Down ジャケット画像" class="thumb" src="images/down.jpg"/>
+<div class="meta">
+<h2 class="title">Down - EP</h2>
+<div class="row"><span class="label">Release Date:</span>2023-12-20</div>
+<div class="row"><span class="label">Label:</span>Self-released</div>
+<div class="row"><span class="label">Link:</span>
+<a href="https://packageemoji.bandcamp.com/album/down" rel="noopener" target="_blank">Bandcamp</a>
+</div>
+</div>
+</article>
+<article class="card">
+<img alt="silver ジャケット画像" class="thumb" src="images/silver.jpg"/>
+<div class="meta">
+<h2 class="title">silver</h2>
+<div class="row"><span class="label">Release Date:</span>2023-5-22</div>
+<div class="row"><span class="label">Label:</span>Self-released</div>
+<div class="row"><span class="label">Link:</span>
+<a href="https://big-up.style/mK054YQ6Yx" rel="noopener" target="_blank">Streaming</a>
+</div></div></article>
+<article class="card">
+<img alt="silver ジャケット画像" class="thumb" src="images/account.jpg"/>
+<div class="meta">
+<h2 class="title">account</h2>
+<div class="row"><span class="label">Release Date:</span>2023-2-10</div>
+<div class="row"><span class="label">Label:</span>Self-released</div>
+<div class="row"><span class="label">Link:</span>
+<a href="https://big-up.style/it35kAcgy3" rel="noopener" target="_blank">Streaming</a>
+</div>
+</div>
+</article>
+</section>
 
-    <h1>Discography</h1>
-
-    <section class="grid">
-
-      <article class="card">
-        <img class="thumb" src="images/logoutright.jpg" alt="right ジャケット画像">
-        <div class="meta">
-          <h2 class="title">log out/right</h2>
-          <div class="row"><span class="label">Release Date:</span>2025-04-26</div>
-          <div class="row"><span class="label">Label:</span>Self-released</div>
-          <div class="row"><span class="label">Link:</span>
-            <a href="https://packageemoji.bandcamp.com/album/log-out-right" target="_blank" rel="noopener">Bandcamp</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="thumb" src="images/lichen.jpg" alt="Lichen ジャケット画像">
-        <div class="meta">
-          <h2 class="title">Lichen</h2>
-          <div class="row"><span class="label">Release Date:</span>2025-03-01</div>
-          <div class="row"><span class="label">Label:</span>Emoticons.</div>
-          <div class="row"><span class="label">Link:</span>
-            <a href="https://emoticons0w0.bandcamp.com/album/l-i-c-h-e-n" target="_blank" rel="noopener">Bandcamp</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <img class="thumb" src="images/down.jpg" alt="Down ジャケット画像">
-        <div class="meta">
-          <h2 class="title">Down - EP</h2>
-          <div class="row"><span class="label">Release Date:</span>2023-12-20</div>
-          <div class="row"><span class="label">Label:</span>Self-released</div>
-          <div class="row"><span class="label">Link:</span>
-            <a href="https://packageemoji.bandcamp.com/album/down" target="_blank" rel="noopener">Bandcamp</a>
-          </div>
-        </div>
-        
-      </article>
-      <article class="card">
-        <img class="thumb" src="images/silver.jpg" alt="silver ジャケット画像">
-        <div class="meta">
-          <h2 class="title">silver</h2>
-          <div class="row"><span class="label">Release Date:</span>2023-5-22</div>
-          <div class="row"><span class="label">Label:</span>Self-released</div>
-          <div class="row"><span class="label">Link:</span>
-            <a href="https://big-up.style/mK054YQ6Yx" target="_blank" rel="noopener">Streaming</a>
-            
-      </article>
-      <article class="card">
-        <img class="thumb" src="images/account.jpg" alt="silver ジャケット画像">
-        <div class="meta">
-          <h2 class="title">account</h2>
-          <div class="row"><span class="label">Release Date:</span>2023-2-10</div>
-          <div class="row"><span class="label">Label:</span>Self-released</div>
-          <div class="row"><span class="label">Link:</span>
-            <a href="https://big-up.style/it35kAcgy3" target="_blank" rel="noopener">Streaming</a>
-          </div>
-        </div>
-      </article>
-
-    </section>
-  </main>
+<section aria-label="SoundCloud edits playlist" class="sc-embed">
+<h2 class="sc-title">Edits (SoundCloud)</h2>
+<div class="sc-player-wrap">
+<iframe allow="autoplay" frameborder="no" height="300" scrolling="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A2108956575&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true" width="100%"></iframe>
+</div>
+<p class="sc-credit">
+<a href="https://soundcloud.com/package_emoji" rel="noopener" target="_blank" title="📦">📦</a>
+<span> · </span>
+<a href="https://soundcloud.com/package_emoji/sets/edits" rel="noopener" target="_blank" title="edits">edits</a>
+</p>
+</section>
+</main>
 </body>
 </html>
