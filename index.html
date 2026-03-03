@@ -5,37 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>package_emoji</title>
   <style>
-    html, body { height: 100%; margin: 0; }
-    body {
-      min-height: 100svh;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      display: grid;
-      place-items: center;
-      color: #fff;
-    }
-    .wrap { text-align: center; }
-    h1 { margin: 0 0 16px; }
-    p { margin: 4px 0; }
-    a { color: #fff; text-decoration: underline; } /* リンクの見た目（必要に応じて調整） */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Helvetica, Arial, sans-serif; background: #fff; color: #000; padding: 40px; max-width: 800px; }
+    a { color: #000; }
+    a:visited { color: #000; }
+    h1 { font-size: 48px; font-weight: bold; letter-spacing: -0.01em; margin-bottom: 40px; line-height: 1; }
+    h2 { font-size: 13px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; margin-top: 48px; border-bottom: 1px solid #000; padding-bottom: 4px; }
+    .links p { font-size: 14px; line-height: 2; }
+    .discography { margin-top: 4px; }
+    .release-row { display: grid; grid-template-columns: 56px 1fr auto; align-items: center; gap: 16px; padding: 10px 0; border-bottom: 1px solid #e0e0e0; text-decoration: none; color: #000; }
+    .release-row:last-child { border-bottom: none; }
+    .release-row img { width: 56px; height: 56px; object-fit: cover; display: block; }
+    .release-info .r-title { font-size: 14px; font-weight: bold; }
+    .release-info .r-meta { font-size: 12px; color: #666; margin-top: 2px; }
+    .release-link-label { font-size: 11px; text-decoration: underline; white-space: nowrap; }
+    .mix-row { padding: 10px 0; border-bottom: 1px solid #e0e0e0; font-size: 14px; }
+    .mix-row:last-child { border-bottom: none; }
+    .mix-row a { text-decoration: underline; }
+    .mix-meta { font-size: 12px; color: #666; margin-top: 2px; }
+    .sc-wrap { margin-top: 4px; }
+    .sc-wrap iframe { width: 100%; display: block; border: none; }
+    footer { margin-top: 60px; font-size: 11px; color: #999; border-top: 1px solid #e0e0e0; padding-top: 16px; }
+    @media (max-width: 600px) { body { padding: 20px; } h1 { font-size: 32px; } .release-row { grid-template-columns: 48px 1fr; } .release-link-label { display: none; } }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>package_emoji</h1>
-    <p>insta: <a href="https://www.instagram.com/package_emoji/" target="_blank">@package_emoji</a></p>
-    <p>X(Twitter): <a href="https://x.com/package_emoji" target="_blank">@package_emoji</a></p>
-    <p>bandcamp: <a href="https://packageemoji.bandcamp.com/music" target="_blank">package_emoji</a></p>
-    <p>Inquiries: Contact me via Instagram DM.</p>
-
-    <a href="discography.html">Discography</a>
-
+  <h1>package_emoji</h1>
+  <h2>Links</h2>
+  <div class="links">
+    <p><a href="https://www.instagram.com/package_emoji/" target="_blank">Instagram</a></p>
+    <p><a href="https://x.com/package_emoji" target="_blank">X (Twitter)</a></p>
+    <p><a href="https://packageemoji.bandcamp.com/music" target="_blank">Bandcamp</a></p>
+    <p><a href="https://soundcloud.com/package_emoji" target="_blank">SoundCloud</a></p>
+    <p>Inquiries: Instagram DM</p>
   </div>
-  
+  <h2>Discography</h2>
+  <div class="discography">
+    <a class="release-row" href="https://packageemoji.bandcamp.com/album/log-out-right" target="_blank" rel="noopener">
+      <img src="images/logoutright.jpg" alt="log out/right" />
+      <div class="release-info"><div class="r-title">log out/right</div><div class="r-meta">2025 · Self-released</div></div>
+      <span class="release-link-label">Bandcamp</span>
+    </a>
+    <a class="release-row" href="https://emoticons0w0.bandcamp.com/album/l-i-c-h-e-n" target="_blank" rel="noopener">
+      <img src="images/lichen.jpg" alt="Lichen" />
+      <div class="release-info"><div class="r-title">Lichen</div><div class="r-meta">2025 · Emoticons.</div></div>
+      <span class="release-link-label">Bandcamp</span>
+    </a>
+    <a class="release-row" href="https://packageemoji.bandcamp.com/album/down" target="_blank" rel="noopener">
+      <img src="images/down.jpg" alt="Down EP" />
+      <div class="release-info"><div class="r-title">Down EP</div><div class="r-meta">2023 · Self-released</div></div>
+      <span class="release-link-label">Bandcamp</span>
+    </a>
+    <a class="release-row" href="https://big-up.style/mK054YQ6Yx" target="_blank" rel="noopener">
+      <img src="images/silver.jpg" alt="silver" />
+      <div class="release-info"><div class="r-title">silver</div><div class="r-meta">2023 · Self-released</div></div>
+      <span class="release-link-label">Streaming</span>
+    </a>
+    <a class="release-row" href="https://big-up.style/it35kAcgy3" target="_blank" rel="noopener">
+      <img src="images/account.jpg" alt="account" />
+      <div class="release-info"><div class="r-title">account</div><div class="r-meta">2023 · Self-released</div></div>
+      <span class="release-link-label">Streaming</span>
+    </a>
+  </div>
+  <h2>Mixes</h2>
+  <div class="mix-row">
+    <div><a href="https://soundcloud.com/package_emoji" target="_blank" rel="noopener">SURG FM Mix</a></div>
+    <div class="mix-meta">SURG FM · Sydney, Australia</div>
+  </div>
+  <h2>Edits</h2>
+  <div class="sc-wrap">
+    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2108956575&color=%23000000&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true" height="360" allow="autoplay" scrolling="no"></iframe>
+  </div>
+  <footer>© 2025 package_emoji</footer>
 </body>
 </html>
-
-
-
